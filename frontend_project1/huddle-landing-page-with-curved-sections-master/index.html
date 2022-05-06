@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=BhuTuka+Expanded+One&family=Calligraffitti&family=Dancing+Script:wght@488&family=Lobster&family=Open+Sans:wght@500&family=Oxygen&family=Pacifico&family=Poppins:wght@600;700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="huddle.js"></script>
 </head>
 <body>
     <section class="top">
@@ -129,12 +131,15 @@
                 <h1>NEWSLETTER</h1>
                 <p id="news_p" class="footer_p">To receive tips on how to grow your community.Sign up to our weekly newsleter. We'll never send you spam or pass on your email address</p>
                 <div class="small">
-                    <input type="text" placeholder="jedy_tech@gmail.com">
-                    <button id="subscribe"><a href="#">Subscribe</a></button>
+                    <form>
+                        <input  autocomplete="off" id="text" type="text" placeholder="jedy_tech@gmail.com">
+                        <span>
+                            <input id="subscribe" type="submit" value="Submit">
+                        </span>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    
 </body>
 </html>
