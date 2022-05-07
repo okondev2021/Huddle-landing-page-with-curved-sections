@@ -19,19 +19,21 @@ body{
     background: white;
     width: 120px;
     height: 35px;
-    border-radius: 30px
-}
-
-.right a{
+    border-radius: 30px;
     color:  hsl(321, 100%, 78%);
-    text-decoration: none;
 }
 
 .info{
     margin-top: 5em
 }
 
-center h1{
+#main_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#main_body h1{
     font-size: 3rem;
     font-weight: 700;
     line-height: 3.6rem;
@@ -39,21 +41,17 @@ center h1{
     font-family: 'Poppins', sans-serif;
 }
 
-center p {
+#main_body p {
     margin-top: 1.5em;
     width:45%;
     text-align: center;
     font-size:1.25rem;
     line-height: 30px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;;
+    font-weight: 400;
 }
 
-center a{
-    color: white;
-    text-decoration: none
-}
-
-center button{
+#main_body button{
     margin-top: 2em;
     background: hsl(322, 100%, 66%);
     border: none;
@@ -61,8 +59,10 @@ center button{
     font-size: 1.2rem;
     width: 350px;
     border-radius: 60px;
-    box-shadow: 4px 4px 9px rgb(93, 93, 93);
     cursor: pointer;
+    color: white;
+    transition: 0.5s ease-out;
+    box-shadow: 3px 3px 8px rgb(93, 93, 93);
 }
 
 .bigscreen img{
@@ -94,7 +94,7 @@ center button{
     text-align: center;
 }
 
-#oneimg{
+.oneimg{
     width: 100%;
     height: auto
 }
@@ -200,11 +200,6 @@ center button{
     font-family: 'Poppins', sans-serif;
 }
 
-.curly4 .inner a{
-    color: white;
-    text-decoration: none
-}
-
 .curly4 .inner button{
     background: hsl(322, 100%, 66%);
     border: none;
@@ -216,6 +211,7 @@ center button{
     border-radius: 40px;
     box-shadow: 4px 4px 9px rgb(93, 93, 93);
     cursor: pointer;
+    color: white;
 }
 .footer .outer{
     margin-top: 2em
@@ -298,23 +294,23 @@ center button{
     margin-bottom: 5em
 }
 
-.img1top{
+#img1top{
     content:url('./images/bg-section-top-desktop-1.svg')
 }
 
-.img1bottom{
+#img1bottom{
     content: url('./images/bg-section-bottom-desktop-1.svg')
 }
 
-.img2top{
+#img2top{
     content: url('./images/bg-section-top-desktop-2.svg')
 }
 
-.img2bottom{
+#img2bottom{
     content: url('./images/bg-section-bottom-desktop-2.svg')
 }
 
-.footimg{
+#footimg{
     content: url('./images/bg-footer-top-desktop.svg')
 }
 
@@ -355,24 +351,29 @@ center button{
 
 @media screen and (max-width:850px){
 
-    .img1top{
-        content:url('./images/bg-section-top-mobile-1.svg')
+    #img1top{
+        content:url('./images/bg-section-top-mobile-1.svg');
+        width: 100%
     }
     
-    .img1bottom{
-        content: url('./images/bg-section-bottom-mobile-1.svg')
+    #img1bottom{
+        content: url('./images/bg-section-bottom-mobile-1.svg');
+        width: 100%
     }
 
-    .img2top{
-        content: url('./images/bg-section-top-mobile-2.svg')
+    #img2top{
+        content: url('./images/bg-section-top-mobile-2.svg');
+        width: 100%
     }
     
-    .img2bottom{
-        content: url('./images/bg-section-bottom-mobile-2.svg')
+    #img2bottom{
+        content: url('./images/bg-section-bottom-mobile-2.svg');
+        width: 100%
     }
     
-    .footimg{
-        content: url('./images/bg-footer-top-mobile.svg')
+    #footimg{
+        content: url('./images/bg-footer-top-mobile.svg');
+        width: 100%
     }
     
     .footer .right{
@@ -403,14 +404,15 @@ center button{
         padding: 0 1.5em 0 1.5em
     }
 
-    center h1{
+    #main_body h1{
         font-size: 1.8rem;
         font-weight: 700;
         line-height: 2.5rem;
         color: #00252E;
+        text-align: center
     }
 
-    center p {
+    #main_body p {
         margin-top: 1.5em;
         width: 100%;
         text-align: center;
@@ -418,7 +420,7 @@ center button{
         font-size:15px
     }
 
-    center button{
+    #main_body button{
         margin-top: 3em;
         background: hsl(322, 100%, 66%);
         border: none;
@@ -612,10 +614,6 @@ center button{
         text-align: center
     }
     
-    .curly4 .inner a{
-        color: white;
-        text-decoration: none
-    }
     
     .curly4 .inner button{
         background: hsl(322, 100%, 66%);
@@ -641,7 +639,8 @@ center button{
         padding:0;
         padding-top: 7em;
         padding-bottom: 3em;
-        padding-left: 1.5em;  
+        padding-left: 1em; 
+        padding-right: 1em 
     }
     
     .small1{
@@ -711,8 +710,8 @@ center button{
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        padding-right: 1em
-    }   
+    }  
+    
 }
 
 
